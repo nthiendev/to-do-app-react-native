@@ -65,7 +65,9 @@ const App = () => {
         title: textInput,
         completed: false,
       };
+      console.log(newTodo);
       setTodos([...todos, newTodo]);
+      setTextInput('');
     }
   };
 
@@ -138,6 +140,7 @@ const App = () => {
       <View style={styles.footer}>
         <View style={styles.inputContainer}>
           <TextInput
+            style={{color: COLORS.black}}
             value={textInput}
             onChangeText={text => setTextInput(text)}
             placeholder="Add Todo"
@@ -189,7 +192,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inputContainer: {
-    backgroundColor: COLORS.white,
+    backgroundColor: '#aaa',
     elevation: 40,
     flex: 1,
     height: 50,
